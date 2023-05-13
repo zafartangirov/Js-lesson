@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="text-center text-white">Davlatlar ro'yxati</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+            <button class="btn btn-success" onclick="showModal()" >+Add</button>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-white">#</th>
+                    <th class="text-white">name</th>
+                    <th colspan="2" class="text-center text-white">Action</th>
+                </tr>
+                </thead>
+                <tbody id="tbody" class="text-white">
+                </tbody>
+            </table>
+    <div class="modal" id="countryModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalHeader"></h4>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <input type="text" id="countryName" placeholder="enter your country name" required/>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger"onclick="modalClose()">Close</button>
+                    <button type="button" class="btn btn-success"onclick="saveCountry()">Save</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+            <div class="modal" id="deleteModal">
+                <div class="modal-dialog">
+                     <div class="modal-content">
+
+                         <div class="modal-header">
+                             <h4 class="modal-title" id="deleteModalHeader"></h4>
+                             <button type="button" class=" btn btn-danger" onclick="deleteModalClose()">x</button>
+                         </div>
+
+                         <div class="modal-footer">
+                             <button type="button" class="btn btn-danger" onclick="deleteModalClose()">Close</button>
+                             <button type="button" class="btn btn-success" onclick="deleteCountry()">Ok</button>
+
+                         </div>
+                     </div>
+                     </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="js/country.js"></script>
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/popper.js"></script>
+</body>
+</html>
